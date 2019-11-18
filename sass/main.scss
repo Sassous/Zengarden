@@ -1,0 +1,129 @@
+/* VARIABLES */
+$base-color: rgb(20, 133, 118);
+$back: rgb(233, 255, 252);
+$raleway: 'raleway', sans-serif;
+$color-typo: #ffffff;
+
+/* MIXINS */ 
+@mixin bloc () {
+    margin: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-top: 10px;
+    width: 800px;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*CSS*/ 
+body{
+    font-family: $raleway;
+    margin: 0px;
+    background-color: $back;
+}
+header{
+    @include flex-center();
+    font-family: 'lora', sans-serif;
+    color: white;
+    background-color: $base-color;
+    
+}
+.summary{
+    @include flex-center();
+    p{
+        font-size: 20px;
+        font-weight: 700;
+        color: $base-color;
+    }
+    
+}
+.preamble{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h3{
+        color: rgb(252, 87, 169);
+    }
+    p{
+        margin: 0px;
+        color: rgb(252, 87, 169);
+    }
+    
+}
+
+.supporting{
+    @include flex-center();
+    flex-direction: column;
+    align-items: center;   
+}
+.explanation{
+    @include bloc();
+}
+
+.participation{
+    @include bloc();
+}
+.benefits{
+    @include bloc();
+}
+.requirements{
+    @extend .preamble ;
+    a{
+        color: rgb(252, 87, 169);
+    }
+    
+}
+footer{
+    
+    background-color: $base-color;
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    
+}
+a{
+    color: black;
+
+    &:hover{
+        color: rgb(252, 87, 169);
+    }
+}
+
+.sidebar{
+    background-color: $base-color;
+    
+    
+    
+}
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    
+    
+    
+}
+.design-selection{
+    padding-right: 80px;
+    color: $color-typo;
+}
+.design-archives{
+    @extend .design-selection ;
+}
+.zen-resources{
+    padding-right: 80px;
+    color: $color-typo;
+}
+.designer-name{
+    color: $color-typo;
+}
+li {
+    &,a{
+      color: $color-typo;  
+    }
+    
+}
